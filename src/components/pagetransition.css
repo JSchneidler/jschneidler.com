@@ -1,0 +1,26 @@
+#transition-group,
+#transition-group > div {
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.page-transition-appear:not(.page-transition-enter) {
+  opacity: 0;
+}
+.page-transition-appear-done:not(.page-transition-enter-done) {
+  opacity: 1;
+  transition: all 0.25s ease-out;
+}
+.page-transition-enter {
+  transform: translateX(100%);
+}
+.page-transition-enter-done {
+  transform: translateX(0%);
+  transition: all 0.25s linear;
+}
+.page-transition-exit {
+  transform: translateX(-100%);
+  transition: all 0.25s linear;
+}

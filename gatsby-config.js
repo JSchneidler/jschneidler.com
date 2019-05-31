@@ -1,26 +1,27 @@
 module.exports = {
   siteMetadata: {
-    title: 'Jordan Schneidler',
-    description: 'A portfolio site showcasing my work and life',
-    author: '@gatsbyjs',
+    title: "Jordan Schneidler",
+    description: "A portfolio site showcasing my work and life",
+    author: "@gatsbyjs"
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    "gatsby-plugin-react-helmet",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'images',
-        path: `${__dirname}/src/images`,
-      },
-    },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-plugin-layout',
-      options: {
-        component: require.resolve('./src/layouts/index.js')
+        name: "images",
+        path: `${__dirname}/src/images`
       }
     },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-plugin-layout",
+      options: {
+        component: require.resolve("./src/layouts/index.js")
+      }
+    }
+    /*
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -33,8 +34,9 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
+    */
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
-  ],
-}
+  ]
+};

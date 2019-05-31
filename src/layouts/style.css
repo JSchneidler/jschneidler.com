@@ -2,6 +2,6 @@ body {
   background: gray;
 }
 
-#transition-container {
+#layout-root {
   height: 100%;
 }

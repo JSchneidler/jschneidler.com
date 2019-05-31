@@ -1,48 +1,36 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import useInterval from "../utils/hooks/useInterval";
 
-class Typewriter extends Component {
-  state = {
-    text: '',
-    showCursor: false,
-  }
+const Typewriter = ({ text, delay, id, className, style }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [showCursor, setShowCursor] = useState(false);
 
-  componentDidMount() {
-    const text = this.props.text;
-    const delay = this.props.delay;
+  // Type timer
+  useInterval(
+    () => setCurrentIndex(currentIndex + 1),
+    currentIndex < text.length ? delay : null
+  );
 
-    let i = 0;
+  // Cursor timer
+  useInterval(() => setShowCursor(!showCursor), 500);
 
-    const typeTimer = setInterval(() => {
-      i += 1;
-      if (i === text.length) {
-        clearInterval(typeTimer);
-      } else this.setState({ text: text.slice(0, i + 1) });
-    }, delay);
-
-    setInterval(() => {
-      this.setState({ showCursor: !this.state.showCursor });
-    }, 500);
-  }
-
-  render() {
-    return (
-      <div id={this.props.id} className={this.props.className} style={this.props.style}>
-        <span>{this.state.text}</span>
-        {<span style={{ opacity: this.state.showCursor ? 1 : 0 }}>|</span>}
-      </div>
-    );
-  }
-}
+  return (
+    <div id={id} className={className} style={style}>
+      <span>{text.slice(0, currentIndex)}</span>
+      {<span style={{ opacity: showCursor ? 1 : 0 }}>|</span>}
+    </div>
+  );
+};
 
 Typewriter.propTypes = {
   text: PropTypes.string,
-  delay: PropTypes.number,
+  delay: PropTypes.number
 };
 
 Typewriter.defaultProps = {
-  text: '',
-  delay: 75,
+  text: "",
+  delay: 75
 };
 
 export default Typewriter;
