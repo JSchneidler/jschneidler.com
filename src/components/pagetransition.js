@@ -3,7 +3,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import "./pagetransition.css";
 
-const timeout = 500;
+const timeout = 100;
 
 const PageTransition = ({ children, location }) => (
   <TransitionGroup id="transition-group">
