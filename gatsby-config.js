@@ -2,23 +2,34 @@ module.exports = {
   siteMetadata: {
     title: "Jordan Schneidler",
     description: "A portfolio site showcasing my work and life",
-    author: "@gatsbyjs"
+    author: "Jordan Schneidler"
   },
   plugins: [
     "gatsby-plugin-react-helmet",
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        stripMetadata: true
+      }
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: `${__dirname}/src/images`
+        path: `./src/images`
       }
     },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-plugin-layout",
       options: {
-        component: require.resolve("./src/layouts/index.js")
+        component: require.resolve("./src/components/layout")
+      }
+    },
+    {
+      resolve: "gatsby-plugin-typography",
+      options: {
+        pathToConfigModule: "src/utils/typography.js"
       }
     }
     /*
