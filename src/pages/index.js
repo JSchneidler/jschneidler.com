@@ -10,7 +10,6 @@ import "../styles/index.css";
 const typewriterOptions = ["SOFTWARE ENGINEER", "WEB DEVELOPER"];
 
 export default ({ data }) => {
-  console.log(data.backgroundImage);
   return (
     <>
       <SEO title="Home" keywords={["gatsby", "application", "react"]} />
@@ -40,7 +39,7 @@ export default ({ data }) => {
 export const fluidImage = graphql`
   fragment fluidImage on File {
     childImageSharp {
-      fluid(maxWidth: 2560, quality: 100) {
+      fluid(maxWidth: 2560, quality: 50) {
         ...GatsbyImageSharpFluid
       }
     }
