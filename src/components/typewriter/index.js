@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import useInterval from "../utils/hooks/useInterval";
+import useInterval from "../../utils/hooks/useInterval";
+
+import "./typewriter.css";
 
 const Typewriter = ({ text, delay, id, className, style }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,8 +19,10 @@ const Typewriter = ({ text, delay, id, className, style }) => {
 
   return (
     <div id={id} className={className} style={style}>
-      <span>{text.slice(0, currentIndex)}</span>
-      {<span style={{ opacity: showCursor ? 1 : 0 }}>|</span>}
+      {text.slice(0, currentIndex)}
+      <span id="cursor" style={{ opacity: showCursor ? 1 : 0 }}>
+        |
+      </span>
     </div>
   );
 };

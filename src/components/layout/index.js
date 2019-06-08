@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import PageTransition from "../pagetransition";
 import Navbar from "../navbar";
 
-import "./global.css";
+import "../../styles/global.css";
 import "./style.css";
 
 const Layout = ({ children, location }) => (

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 
@@ -10,9 +10,14 @@ import "../styles/index.css";
 const typewriterOptions = ["SOFTWARE ENGINEER", "WEB DEVELOPER"];
 
 export default ({ data }) => {
+  const [typewriterOption, setTypewriterOption] = useState(
+    Math.floor(Math.random() * typewriterOptions.length)
+  );
+
   return (
     <>
       <SEO title="Home" keywords={["gatsby", "application", "react"]} />
+      <div id="background-image-overlay" />
       <Img
         fluid={data.backgroundImage.childImageSharp.fluid}
         className="background-image"
@@ -24,11 +29,7 @@ export default ({ data }) => {
           <hr id="divider" />
           <Typewriter
             id="typewriter"
-            text={
-              typewriterOptions[
-                Math.floor(Math.random() * typewriterOptions.length)
-              ]
-            }
+            text={typewriterOptions[typewriterOption]}
           />
         </div>
       </div>
@@ -36,20 +37,14 @@ export default ({ data }) => {
   );
 };
 
-export const fluidImage = graphql`
-  fragment fluidImage on File {
-    childImageSharp {
-      fluid(maxWidth: 2560, quality: 50) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`;
-
 export const query = graphql`
   query {
     backgroundImage: file(relativePath: { eq: "background.jpg" }) {
-      ...fluidImage
+      childImageSharp {
+        fluid(maxWidth: 2560) {
+          ...GatsbyImageSharpFluid
+        }
+      }
     }
   }
 `;
