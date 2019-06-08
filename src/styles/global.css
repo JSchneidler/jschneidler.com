@@ -2,6 +2,7 @@ a {
   text-shadow: none;
 }
 
-h1 {
+h1,
+img {
   margin: 0;
 }

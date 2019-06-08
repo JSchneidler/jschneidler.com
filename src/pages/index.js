@@ -24,6 +24,15 @@ export default ({ data }) => {
         backgroundColor
       />
       <div id="content-container">
+        <div id="top-bar">
+          <a
+            id="github-link"
+            href="https://github.com/JSchneidler/portfolio-site"
+            target="_blank"
+          >
+            <Img fixed={data.githubLogo.childImageSharp.fixed} />
+          </a>
+        </div>
         <div id="content">
           <h1 id="header-text">JORDAN SCHNEIDLER</h1>
           <hr id="divider" />
@@ -43,6 +52,13 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 2560) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    githubLogo: file(relativePath: { eq: "github-white.png" }) {
+      childImageSharp {
+        fixed(width: 20, height: 20) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
