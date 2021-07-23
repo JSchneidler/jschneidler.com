@@ -20,23 +20,19 @@ export default function Home() {
 
         <div id='content-container'>
           <div id='top-bar'>
-            {/*
             <a
-              id='github-link'
-              href='https://github.com/JSchneidler/portfolio-site'
+              href='https://github.com/JSchneidler/jschneidler.com'
               target='_blank'
             >
-              <Img fixed={data.githubLogo.childImageSharp.fixed} />
+              <img src='/images/github-white.png' height='25px' width='25px' alt='Github' />
             </a>
-            */}
           </div>
           <div id='content'>
             <h1 id='header-text'>JORDAN SCHNEIDLER</h1>
             <hr id='divider' />
-            {/*<Typewriter
-              id='typewriter'
+            <Typewriter
               text={typewriterOptions[typewriterOption]}
-            />*/}
+            />
           </div>
         </div>
       </main>
@@ -70,17 +66,8 @@ export default function Home() {
 
         #divider {
           border-bottom: 2px solid white;
-          margin: 15px auto;
+          margin: 0 auto 15px auto;
           width: 200px;
-        }
-
-        #typewriter {
-          color: #fdae55;
-          font-family: "Courier New", Courier, monospace;
-          font-size: 2em;
-          line-height: 30px;
-          text-shadow: 0px 0px 10px #fdae55, 0px 0px 5px #fdae55;
-          text-align: center;
         }
 
         #top-bar {
@@ -88,10 +75,6 @@ export default function Home() {
           padding-top: 2px;
           padding-right: 2px;
           width: 100%;
-        }
-
-        #github-link {
-          background: none;
         }
       `}</style>
 

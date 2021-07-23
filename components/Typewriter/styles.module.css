@@ -1,4 +1,13 @@
-#cursor {
+.typewriter {
+  color: #fdae55;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2em;
+  line-height: 30px;
+  text-shadow: 0px 0px 10px #fdae55, 0px 0px 5px #fdae55;
+  text-align: center;
+}
+
+.cursor {
   color: white;
   text-shadow: none;
   position: absolute;

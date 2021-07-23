@@ -4,7 +4,7 @@ import useInterval from '../../hooks/useInterval';
 
 import styles from './styles.module.css';
 
-const Typewriter = ({ text, delay, id, className, style }) => {
+const Typewriter = ({ text, delay }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(false);
 
@@ -18,9 +18,9 @@ const Typewriter = ({ text, delay, id, className, style }) => {
   useInterval(() => setShowCursor(!showCursor), 500);
 
   return (
-    <div id={id} className={className} style={style}>
+    <div className={styles.typewriter}>
       {text.slice(0, currentIndex)}
-      <span id={styles.cursor} style={{ opacity: showCursor ? 1 : 0 }}>
+      <span className={styles.cursor} style={{ opacity: showCursor ? 1 : 0 }}>
         |
       </span>
     </div>
