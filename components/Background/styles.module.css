@@ -1,0 +1,14 @@
+#backgroundImageOverlay {
+  background: rgb(0, 70, 120, 0.75);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+#backgroundImage {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: -2;
+}
