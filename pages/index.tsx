@@ -33,10 +33,10 @@ export default function Home() {
           <div id='content'>
             <h1 id='header-text'>JORDAN SCHNEIDLER</h1>
             <hr id='divider' />
-            <Typewriter
+            {/*<Typewriter
               id='typewriter'
               text={typewriterOptions[typewriterOption]}
-            />
+            />*/}
           </div>
         </div>
       </main>
