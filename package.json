@@ -1,25 +1,30 @@
 {
-  "name": "portfolio-site-gatsby",
+  "name": "jschneidler.com",
   "private": true,
-  "description": "A portfolio site showcasing my work and life. Made with Gatsby.",
+  "description": "Personal site.",
   "version": "0.1.0",
   "author": "Jordan Schneidler <jordan.schneidler@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.7.5",
-    "gatsby-image": "^2.1.2",
-    "gatsby-plugin-layout": "^1.0.15",
-    "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-sharp": "^2.1.2",
-    "gatsby-plugin-typography": "^2.2.13",
-    "gatsby-source-filesystem": "^2.0.37",
-    "gatsby-transformer-sharp": "^2.1.20",
+    "@inlet/react-pixi": "^6.6.3",
+    "@loadable/component": "^5.15.0",
+    "gatsby": "^3.10.2",
+    "gatsby-image": "^3.10.0",
+    "gatsby-plugin-manifest": "^3.10.0",
+    "gatsby-plugin-react-helmet": "^4.10.0",
+    "gatsby-plugin-sharp": "^3.10.2",
+    "gatsby-plugin-typescript": "^3.10.0",
+    "gatsby-plugin-typography": "^3.10.0",
+    "gatsby-source-filesystem": "^3.10.0",
+    "gatsby-transformer-sharp": "^3.10.0",
+    "normalize.css": "^8.0.1",
+    "pixi.js": "^6.0.4",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1",
-    "react-transition-group": "^4.0.1",
-    "react-typography": "^0.16.19",
-    "typography": "^0.16.19",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-resize-detector": "^6.7.6",
+    "react-typography": "^0.16.20",
+    "typography": "^0.16.21",
     "typography-theme-fairy-gates": "^0.16.19"
   },
   "keywords": [
@@ -35,9 +40,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/JSchneidler/jschneidler.com"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/JSchneidler/jschneidler.com/issues"
   }
 }
