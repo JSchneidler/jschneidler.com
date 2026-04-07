@@ -20,6 +20,11 @@ const posts = (await getCollection('blog')).sort(
 			main {
 				width: 960px;
 			}
+
+			main > h1 {
+				text-align: center;
+			}
+
 			ul {
 				display: flex;
 				flex-wrap: wrap;
@@ -89,7 +94,8 @@ const posts = (await getCollection('blog')).sort(
 	<body>
 		<Header />
 		<main>
-			<section>
+			<h1>Coming soon!</h1>
+			<!-- <section>
 				<ul>
 					{
 						posts.map((post) => (
@@ -107,7 +113,7 @@ const posts = (await getCollection('blog')).sort(
 						))
 					}
 				</ul>
-			</section>
+			</section> -->
 		</main>
 		<Footer />
 	</body>
